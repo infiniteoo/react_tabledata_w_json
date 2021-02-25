@@ -23,6 +23,7 @@ class Table extends Component {
     this.setState({data})
     
   }
+  
 
   getKeys = function() {
       return (
@@ -55,7 +56,7 @@ class Table extends Component {
       <div>
           <h1>Sortable Data Table w/React.js</h1>
           <hr/>
-        <table>
+        <table className="tbl-content">
           <thead>
             <tr>{this.getHeader()}</tr>
           </thead>
