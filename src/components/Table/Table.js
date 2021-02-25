@@ -53,6 +53,8 @@ class Table extends Component {
     
     return (
       <div>
+          <h1>Random User Data Table w/React.js</h1>
+          <hr/>
         <table>
           <thead>
             <tr>{this.getHeader()}</tr>
