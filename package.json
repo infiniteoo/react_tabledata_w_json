@@ -14,13 +14,10 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "deploy": "gh-pages -b master -d build",
-    "predeploy": "npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-    
   },
   "eslintConfig": {
     "extends": [
@@ -28,7 +25,6 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://infiniteoo.github.io/react_tabledata_w_json",
   "browserslist": {
     "production": [
       ">0.2%",
