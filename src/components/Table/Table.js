@@ -53,7 +53,7 @@ class Table extends Component {
     
     return (
       <div>
-          <h1>Random User Data Table w/React.js</h1>
+          <h1>Sortable Data Table w/React.js</h1>
           <hr/>
         <table>
           <thead>
