@@ -1,28 +1,20 @@
-import './App.css';
-import React, { Component } from 'react'
-import tableData from './user_data.json'
-
+import "./App.css";
+import React, { Component } from "react";
+import tableData from "./user_data.json";
+import Table from "./components/Table/Table.js";
 
 class App extends Component {
-
-  constructor(props){
-    super(props)
-    this.state = tableData
+  constructor(props) {
+    super(props);
+    this.state = {tableData};
   }
 
   render() {
-    return(
-
-
+    return (
       
-        <h1>hi friends</h1>
-      
-
-
-    )
+    <Table data={this.state.tableData} />
+    ) 
   }
-
-
 }
 
 export default App;

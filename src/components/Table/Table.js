@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import "Table.css"
+import "./Table.css"
 
 class Table extends Component {
   constructor(props) {
@@ -10,7 +10,10 @@ class Table extends Component {
   }
 
   getKeys = function() {
-      return Object.keys(this.props.data[0])
+      return (
+         
+          Object.keys(this.props.data[0])
+      )
   }
 
   getHeader = function() {
