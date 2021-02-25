@@ -6,6 +6,7 @@ class Table extends Component {
     super(props)
     this.getKeys = this.getKeys.bind(this)
     this.getHeader = this.getHeader.bind(this)
+    this.getRows = this.getRows.bind(this)
   }
 
   getKeys = function() {
@@ -19,6 +20,16 @@ class Table extends Component {
       })
   }
 
+  getRows = function() {
+      const items = this.props.data
+      const keys = this.getKeys()
+
+      return items.map((row, index) => {
+        return <tr key={index}><RenderRow key={index} data={row} keys={keys}/></tr>
+      })
+
+  }
+
   render() {
     return (
       <div>
@@ -26,7 +37,9 @@ class Table extends Component {
           <thead>
             <tr>{this.getHeader()}</tr>
           </thead>
-          <tbody></tbody>
+          <tbody>
+              {this.getRows()}
+          </tbody>
         </table>
       </div>
     );
