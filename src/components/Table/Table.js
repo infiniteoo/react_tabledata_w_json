@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Table.css";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
+import DropDownFilter from '../DropDownFilter/DropDownFilter.js'
+
 
 
 class Table extends Component {
@@ -60,23 +60,7 @@ class Table extends Component {
     return (
       <div>
         <h1>Sortable Data Table w/React.js</h1>
-        <DropdownButton
-          id="dropdown-item-button"
-          title={this.state.dropDownValue}
-          className="format"
-        >
-          <Dropdown.Item as="button"><div onClick={(e) => this.changeValue(e.target.textContent)}>Name</div></Dropdown.Item>
-          <Dropdown.Item as="button"><div onClick={(e) => this.changeValue(e.target.textContent)}>Age</div></Dropdown.Item>
-          <Dropdown.Item as="button"><div onClick={(e) => this.changeValue(e.target.textContent)}>Gender</div></Dropdown.Item>
-          <Dropdown.Item as="button"><div onClick={(e) => this.changeValue(e.target.textContent)}>Company</div></Dropdown.Item>
-          <Dropdown.Item as="button"><div onClick={(e) => this.changeValue(e.target.textContent)}>Email</div></Dropdown.Item>
-          <Dropdown.Item as="button"><div onClick={(e) => this.changeValue(e.target.textContent)}>Phone</div></Dropdown.Item>
-          <Dropdown.Item as="button"><div onClick={(e) => this.changeValue(e.target.textContent)}>City</div></Dropdown.Item>
-          <Dropdown.Item as="button"><div onClick={(e) => this.changeValue(e.target.textContent)}>State</div></Dropdown.Item>
-          <Dropdown.Item as="button"><div onClick={(e) => this.changeValue(e.target.textContent)}>Zipcode</div></Dropdown.Item>
-
-          
-        </DropdownButton>
+        <DropDownFilter/>
 
         <hr />
         <table className="tbl-content">
