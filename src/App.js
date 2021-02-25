@@ -3,17 +3,20 @@ import React, { Component } from "react";
 import tableData from "./user_data.json";
 import Table from "./components/Table/Table.js";
 
+
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {tableData};
+    this.state = { tableData };
   }
 
   render() {
     return (
-      
-    <Table data={this.state.tableData} />
-    ) 
+      <>
+        
+        <Table data={this.state.tableData} />
+      </>
+    );
   }
 }
 
