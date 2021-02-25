@@ -59,7 +59,7 @@ class Table extends Component {
   render() {
     return (
       <div>
-        <h1>Sortable Data Table w/React.js</h1>
+        <h1 id='h1-title'>Sortable Data Table w/React.js</h1>
         <DropDownFilter/>
 
         <hr />

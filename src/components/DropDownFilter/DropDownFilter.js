@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
-
+import "./DropDownFilter.css";
 
 
 class DropDownFilter extends Component {
@@ -15,7 +15,7 @@ class DropDownFilter extends Component {
     changeValue(text) {
         this.setState({ dropDownValue: text });
       }
-      
+
   render() {
     return (
       <DropdownButton
