@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import "./Table.css"
 
+
 class Table extends Component {
   constructor(props) {
     super(props)
@@ -8,14 +9,17 @@ class Table extends Component {
     this.getHeader = this.getHeader.bind(this)
     this.getRows = this.getRows.bind(this)
     this.onSort = this.onSort.bind(this)
-    this.state = { data: [] };
+    
   }
 
   onSort(event, sortKey){
+      console.log('onsort method touched!', sortKey)
   
-    const data = this.state.data;
+    const data = this.props.data
     data.sort((a,b) => a[sortKey].localeCompare(b[sortKey]))
-    this.setState({data})
+
+    console.log(data)
+    
   }
 
   getKeys = function() {
@@ -34,7 +38,7 @@ class Table extends Component {
   }
 
   getRows = function() {
-      const items = this.props.data
+      const items = this.props.data 
       const keys = this.getKeys()
 
       return items.map((row, index) => {
