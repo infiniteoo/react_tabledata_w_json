@@ -7,6 +7,15 @@ class Table extends Component {
     this.getKeys = this.getKeys.bind(this)
     this.getHeader = this.getHeader.bind(this)
     this.getRows = this.getRows.bind(this)
+    this.onSort = this.onSort.bind(this)
+    this.state = { data: [] };
+  }
+
+  onSort(event, sortKey){
+  
+    const data = this.state.data;
+    data.sort((a,b) => a[sortKey].localeCompare(b[sortKey]))
+    this.setState({data})
   }
 
   getKeys = function() {
@@ -19,7 +28,8 @@ class Table extends Component {
   getHeader = function() {
       const keys = this.getKeys()
       return keys.map((key) => {
-          return <th key={key}>{key.toUpperCase()}</th>
+          
+          return <th onClick={e => this.onSort(e, key)} key={key}>{key.toUpperCase()}</th>
       })
   }
 
@@ -34,6 +44,7 @@ class Table extends Component {
   }
 
   render() {
+   
     return (
       <div>
         <table>
