@@ -9,16 +9,18 @@ class Table extends Component {
     this.getHeader = this.getHeader.bind(this)
     this.getRows = this.getRows.bind(this)
     this.onSort = this.onSort.bind(this)
+    this.state = { data: props.data };
     
   }
 
   onSort(event, sortKey){
       console.log('onsort method touched!', sortKey)
   
-    const data = this.props.data
+    const data = this.state.data
     data.sort((a,b) => a[sortKey].localeCompare(b[sortKey]))
 
     console.log(data)
+    this.setState({data})
     
   }
 
@@ -38,7 +40,7 @@ class Table extends Component {
   }
 
   getRows = function() {
-      const items = this.props.data 
+      const items = this.state.data
       const keys = this.getKeys()
 
       return items.map((row, index) => {
@@ -48,7 +50,7 @@ class Table extends Component {
   }
 
   render() {
-   
+    
     return (
       <div>
         <table>
