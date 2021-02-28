@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import "./Table.css";
-import DropDownFilter from '../DropDownFilter/DropDownFilter.js'
-import SearchForm from '../SearchForm/SearchForm.js'
-
+import DropDownFilter from "../DropDownFilter/DropDownFilter.js";
+import SearchForm from "../SearchForm/SearchForm.js";
 
 
 class Table extends Component {
@@ -28,7 +27,7 @@ class Table extends Component {
     console.log(data);
     this.setState({ data });
   }
-
+  
   getKeys = function () {
     return Object.keys(this.props.data[0]);
   };
@@ -56,17 +55,60 @@ class Table extends Component {
       );
     });
   };
+  handleInputChange = event => {
+   /*  RenderRow(event.target.value); */
+   // we have to filter this.props with event.target.value
+   /* console.log(this.props.data[0]) */
+
+   const filteredArray = this.state.data.filter((item) => {
+
+    for(const key in item) {
+      console.log('key, item', key, item)
+      if(item[key].indexOf(event.target.value)) {
+        return item
+      }
+
+    }
+
+    
+
+   })
+
+
+   // delete above
+
+   var results = []
+   var toSearch = event.target.value
+   for(var i=0; i<this.props.data.length; i++) {
+    for(const key in this.props.data[i]) {
+      if(this.props.data[i][key].indexOf(toSearch)!==-1) {
+        results.push(this.props.data[i]);
+      }
+    }
+  }
+
+   console.log('value of filteredArray after filter: ', results)
+   this.getRows();
+  };
+
 
   render() {
     return (
       <div>
-        <h1 id='h1-title'>Sortable Data Table w/React.js</h1>
-        <DropDownFilter/>
-        <SearchForm
-          /* handleInputChange={handleInputChange}
-          results={search}
-         *//>
-
+        <h1 id="h1-title">Sortable Data Table w/React.js</h1>
+        <div className='row'>
+          <div className='col-md-2'>
+          <DropDownFilter />
+          </div>
+          <div className='col-md-10'>
+          <SearchForm
+          handleInputChange={this.handleInputChange}
+          /* results={search} */
+        
+          />
+          </div>
+          
+        </div>
 
         <hr />
         <table className="tbl-content">
