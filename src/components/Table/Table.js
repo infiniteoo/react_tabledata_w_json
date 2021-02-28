@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Table.css";
 import DropDownFilter from '../DropDownFilter/DropDownFilter.js'
+import SearchForm from '../SearchForm/SearchForm.js'
 
 
 
@@ -61,6 +62,11 @@ class Table extends Component {
       <div>
         <h1 id='h1-title'>Sortable Data Table w/React.js</h1>
         <DropDownFilter/>
+        <SearchForm
+          /* handleInputChange={handleInputChange}
+          results={search}
+         *//>
+
 
         <hr />
         <table className="tbl-content">
