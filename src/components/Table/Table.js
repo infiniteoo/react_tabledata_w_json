@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Table.css";
-import DropDownFilter from "../DropDownFilter/DropDownFilter.js";
 import SearchForm from "../SearchForm/SearchForm.js";
 
 class Table extends Component {
@@ -70,7 +69,7 @@ class Table extends Component {
     this.setState({
       data: uniqueArray,
     });
-    /* this.getRows(); */
+    
   };
 
   render() {
@@ -78,10 +77,10 @@ class Table extends Component {
       <div>
         <h1 id="h1-title">Sortable Data Table w/React.js</h1>
         <div className="row">
-          <div className="col-md-2">
-            <DropDownFilter />
+        <div className="col-md-4">
+            
           </div>
-          <div className="col-md-10">
+          <div className="col-md-8">
             <SearchForm handleInputChange={this.handleInputChange} />
           </div>
         </div>
