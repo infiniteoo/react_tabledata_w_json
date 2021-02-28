@@ -56,27 +56,7 @@ class Table extends Component {
     });
   };
   handleInputChange = event => {
-   /*  RenderRow(event.target.value); */
-   // we have to filter this.props with event.target.value
-   /* console.log(this.props.data[0]) */
-
-   const filteredArray = this.state.data.filter((item) => {
-
-    for(const key in item) {
-      console.log('key, item', key, item)
-      if(item[key].indexOf(event.target.value)) {
-        return item
-      }
-
-    }
-
-    
-
-   })
-
-
-   // delete above
-
+   
    var results = []
    var toSearch = event.target.value
    for(var i=0; i<this.props.data.length; i++) {
@@ -88,6 +68,9 @@ class Table extends Component {
   }
 
    console.log('value of filteredArray after filter: ', results)
+   this.setState({
+     data: results
+   })
    this.getRows();
   };
 
