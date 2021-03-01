@@ -1,25 +1,4 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** infiniteoo, react_tabledata_w_json, doorman_t, troydorman@gmail.com, react_tabledata_w_json, This project utilizes the React.js framework to generate and fill a table with random user data from a JSON file.
--->
 
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -39,7 +18,7 @@
   <h3 align="center">react_tabledata_w_json</h3>
 
   <p align="center">
-    This project utilizes the React.js framework to generate and fill a table with random user data from a JSON file.
+    This project utilizes the React.js framework to generate and fill a sortable, real-time searchable data table with random users.
     <br />
     <a href="https://github.com/infiniteoo/react_tabledata_w_json"><strong>Explore the docs »</strong></a>
     <br />
@@ -52,7 +31,7 @@
   </p>
 </p>
 
-
+![example gif](/example/example_gif.gif)
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -85,18 +64,18 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+Our first major React project challenged us to build a sortable and searchable table filled with randomly generated user data stored in a JSON file.  
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`infiniteoo`, `react_tabledata_w_json`, `doorman_t`, `troydorman@gmail.com`, `react_tabledata_w_json`, `This project utilizes the React.js framework to generate and fill a table with random user data from a JSON file.`
 
 
 ### Built With
+[![react](https://aleen42.github.io/badges/src/react.svg)](https://aleen42.github.io/badges/src/react.svg)
+[![eslint](https://aleen42.github.io/badges/src/eslint.svg)](https://aleen42.github.io/badges/src/eslint.svg)
+[![javascript](https://aleen42.github.io/badges/src/javascript.svg)](https://aleen42.github.io/badges/src/javascript.svg)
+[![github](https://aleen42.github.io/badges/src/github.svg)](https://aleen42.github.io/badges/src/github.svg)
+[![npm](https://aleen42.github.io/badges/src/npm.svg)](https://aleen42.github.io/badges/src/npm.svg)
+[![visual_studio_code](https://aleen42.github.io/badges/src/visual_studio_code.svg)](https://aleen42.github.io/badges/src/visual_studio_code.svg)
 
-* []()
-* []()
-* []()
 
 
 
@@ -123,15 +102,6 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
@@ -168,16 +138,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Your Name - [@doorman_t](https://twitter.com/doorman_t) - troydorman@gmail.com
 
 Project Link: [https://github.com/infiniteoo/react_tabledata_w_json](https://github.com/infiniteoo/react_tabledata_w_json)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
 
 
 

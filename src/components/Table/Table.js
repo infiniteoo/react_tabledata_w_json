@@ -64,22 +64,19 @@ class Table extends Component {
       }
     }
 
-    let uniqueArray = [...new Set(results)]
+    let uniqueArray = [...new Set(results)];
 
     this.setState({
       data: uniqueArray,
     });
-    
   };
 
   render() {
     return (
       <div>
-        <h1 id="h1-title">Sortable Data Table w/React.js</h1>
+        <h1 id="h1-title">Sortable Table Data w/React.js</h1>
         <div className="row">
-        <div className="col-md-4">
-            
-          </div>
+          <div className="col-md-4"></div>
           <div className="col-md-8">
             <SearchForm handleInputChange={this.handleInputChange} />
           </div>
